@@ -1,10 +1,11 @@
 # Laravel Layered Logic
+[![Latest Version](https://img.shields.io/github/release/erfanshk/laravel-layered-logic.svg?style=flat-square)](https://github.com/erfanshk/laravel-layered-logic/releases)
+[![run-tests](https://github.com/erfanshk/laravel-layered-logic/actions/workflows/run-tests.yml/badge.svg)](https://github.com/erfanshk/laravel-layered-logic/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/erfanshk/laravel-layered-logic.svg?style=flat-square)](https://packagist.org/packages/erfanshk/laravel-layered-logic)
 ## Under Development - Beta Release
-
 A simple package to make repositories , services and their corresponding interfaces for laravel.
-
-### Dependent on
-> Laravel 11+
+### Works on
+> Laravel ^11.0
 ### How to Install
 Just run the command below and everything is ready.
 ```php
