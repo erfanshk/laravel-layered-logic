@@ -9,10 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Run composer install
-        run: composer install -n --prefer-dist
-        env:
-          APP_ENV: testing
+      - name: Run composer update
+        run: composer update
 
       - name: Run tests
         run: composer test
