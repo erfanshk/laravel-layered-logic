@@ -1,0 +1,38 @@
+<?php
+
+namespace {{namespace}};
+
+use Erfanshk\LaravelLayeredLogic\BaseController;
+use Erfanshk\LaravelLayeredLogic\Contracts\BaseControllerInterface;
+use Erfanshk\LaravelLayeredLogic\Helpers\HttpResponses;
+use Illuminate\Http\JsonResponse;
+use {{request}};
+/**
+ * Controller {{ class }}
+ */
+
+class {{ class }} extends BaseController implements BaseControllerInterface
+{
+    public function service() : string
+    {
+        return {{ service }};
+    }
+
+    public function index(UserRequest $request) : JsonResponse
+    {
+        return $this
+            ->setResponseArray($this->service->repository->all()->toCollection())
+            ->setStatus(HttpResponses::OK)
+            ->respond();
+    }
+
+    public function show(int $id) : JsonResponse
+    {
+        return $this
+            ->setResponseArray([
+                'data'=>$this->service->repository->find($id)->toResource(),
+            ])
+            ->setStatus(HttpResponses::OK)
+            ->respond();
+    }
+}

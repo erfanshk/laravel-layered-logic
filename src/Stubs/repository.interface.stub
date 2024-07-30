@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use Erfanshk\LaravelLayeredLogic\Contracts\BaseRepositoryInterface;
+/**
+ * Repository Interface {{ class }}
+ */
+
+interface {{ class }} extends BaseRepositoryInterface
+{
+
+}

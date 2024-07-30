@@ -1,0 +1,22 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Http\Request;
+use Erfanshk\LaravelLayeredLogic\BaseResource;
+use Erfanshk\LaravelLayeredLogic\Contracts\BaseResourceInterface;
+/**
+ * Resource {{ class }}
+ */
+class {{class}} extends BaseResource implements BaseResourceInterface
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray(Request $request): array
+    {
+        return parent::toArray($request);
+    }
+}
