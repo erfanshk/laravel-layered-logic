@@ -20,23 +20,24 @@ php artisan make:layered User
 It creates the following files:
 
 
-- App\Layers
-  - Controllers
-    - UserController 
-    - Requests
-      - UserRequest
-  - Resources
-    - UserResource
-    - Collection
-      - UserCollection
-  - Repositories
-    - UserRepository
-    - Interfaces
-      - UserRepositoryInterface
-  - Services
-    - UserService
-    - Interfaces
-      - UserServiceInterface
+- App
+  - Layers
+    - Controllers
+      - UserController 
+      - Requests
+        - UserRequest
+    - Resources
+      - UserResource
+      - Collection
+        - UserCollection
+    - Repositories
+      - UserRepository
+      - Interfaces
+        - UserRepositoryInterface
+    - Services
+      - UserService
+      - Interfaces
+        - UserServiceInterface
 
 
 It also registers repository and service interfaces as singletons in the published LayeredLogicServiceProvider in:
