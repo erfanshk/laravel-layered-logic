@@ -1,0 +1,19 @@
+<?php
+
+namespace {{namespace}};
+
+use Erfanshk\LaravelLayeredLogic\BaseService;
+use App\Layers\Services\Interfaces\{{ class }}Interface;
+
+/**
+ * Service {{ class }}
+ */
+
+class {{ class }} extends BaseService implements {{ class }}Interface
+{
+    public function repository() : string
+    {
+        return {{ repository }};
+    }
+
+}

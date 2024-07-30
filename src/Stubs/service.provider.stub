@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Providers;
+
+use Erfanshk\LaravelLayeredLogic\LayeredLogic;
+use Illuminate\Support\ServiceProvider;
+
+class LayeredLogicServiceProvider extends ServiceProvider
+{
+
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+    }
+
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        LayeredLogic::registerBindingsArray(config('layered'),$this->app);
+    }
+}
