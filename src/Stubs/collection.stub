@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+
+use Erfanshk\LaravelLayeredLogic\Traits\CollectionPaginatableTrait;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+class {{ class }} extends ResourceCollection
+{
+    use CollectionPaginatableTrait;
+
+    public static $wrap = '';
+
+    public function toArray(Request $request): array
+    {
+        return $this->setPaginatable({{resource}})->paginate();
+
+    }
+}

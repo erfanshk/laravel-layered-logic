@@ -1,0 +1,28 @@
+<?php
+
+namespace {{namespace}};
+
+use Erfanshk\LaravelLayeredLogic\BaseRepository;
+use App\Layers\Repositories\Interfaces\{{interface}};
+/**
+ * Repository {{ class }}
+ */
+
+class {{ class }} extends BaseRepository implements {{interface}}
+{
+    public function model() : string
+    {
+        return {{model}};
+    }
+
+    public function resource() : string
+    {
+        return {{resource}};
+    }
+
+    public function collection() : string
+    {
+        return {{collection}};
+    }
+
+}
