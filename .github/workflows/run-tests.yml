@@ -11,6 +11,9 @@ jobs:
 
       - name: Run composer update
         run: composer update
-
+        with:
+          php-version: 8.2
       - name: Run tests
         run: composer test
+        with:
+          php-version: 8.2
