@@ -25,18 +25,18 @@ It creates the following files:
     - UserController 
     - Requests
       - UserRequest
-    - Resources
-      - UserResource
-      - Collection
-        - UserCollection
-    - Repositories
-      - UserRepository
-      - Interfaces
-        - UserRepositoryInterface
-    - Services
-      - UserService
-      - Interfaces
-        - UserServiceInterface
+  - Resources
+    - UserResource
+    - Collection
+      - UserCollection
+  - Repositories
+    - UserRepository
+    - Interfaces
+      - UserRepositoryInterface
+  - Services
+    - UserService
+    - Interfaces
+      - UserServiceInterface
 
 
 It also registers repository and service interfaces as singletons in the published LayeredLogicServiceProvider in:
