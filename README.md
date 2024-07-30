@@ -45,7 +45,11 @@ It also registers repository and service interfaces as singletons in the publish
 The binding array is located in
 > config\layered.php
 
-By running the artisan make:layered {model} command, it is automatically registered in the app container.
+By running:
+```php
+php artisan make:layered {model}
+```
+it is automatically registered in the app container.
 Now you can use your pre-made UserService by injecting the UserServiceInterface anywhere in your application.
 
 ### What you get by using this package?
