@@ -32,9 +32,9 @@ class MakeController extends GeneratorCommand
     protected function customBuild(string $content): string
     {
 
-        $requestName = $this->laravel->getNamespace(). Str::replaceFirst('\\','',DirectoriesEnum::REQUESTS->value) .'\\' . $this->getSingularClassName() . '\\' . $this->getSingularClassName() . 'Request';
+        $requestName = '\\' . $this->laravel->getNamespace() . Str::replaceFirst('\\', '', DirectoriesEnum::REQUESTS->value) . '\\' . $this->getSingularClassName() . '\\' . $this->getSingularClassName() . 'Request';
         $content = Str::replace('{{request}}', $requestName, $content);
-        $serviceName = '\\'.$this->laravel->getNamespace(). Str::replaceFirst('\\','',DirectoriesEnum::SERVICES_INTERFACES->value) .'\\' . $this->getSingularClassName() . 'ServiceInterface::class';
+        $serviceName = '\\' . $this->laravel->getNamespace() . Str::replaceFirst('\\', '', DirectoriesEnum::SERVICES_INTERFACES->value) . '\\' . $this->getSingularClassName() . 'ServiceInterface::class';
         return Str::replace('{{ service }}', $serviceName, $content);
     }
 
