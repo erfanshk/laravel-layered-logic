@@ -6,7 +6,6 @@ use Erfanshk\LaravelLayeredLogic\BaseController;
 use Erfanshk\LaravelLayeredLogic\Contracts\BaseControllerInterface;
 use Erfanshk\LaravelLayeredLogic\Helpers\HttpResponses;
 use Illuminate\Http\JsonResponse;
-use {{request}};
 /**
  * Controller {{ class }}
  */
@@ -18,7 +17,7 @@ class {{ class }} extends BaseController implements BaseControllerInterface
         return {{ service }};
     }
 
-    public function index(UserRequest $request) : JsonResponse
+    public function index({{request}} $request) : JsonResponse
     {
         return $this
             ->setResponseArray($this->service->repository->all()->toCollection())
